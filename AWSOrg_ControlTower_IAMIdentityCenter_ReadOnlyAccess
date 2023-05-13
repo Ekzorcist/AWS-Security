@@ -1,0 +1,43 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowReadAccessToOrganizations",
+			"Effect": "Allow",
+			"Action": [
+				"organizations:Describe*",
+				"organizations:List*"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "AllowReadAccessToControlTower",
+			"Effect": "Allow",
+			"Action": [
+				"controltower:Describe*",
+				"controltower:Get*",
+				"controltower:List*"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "AllowReadAccessToIAMIdentityCenter",
+			"Effect": "Allow",
+			"Action": [
+				"sso:Describe*",
+				"sso:Get*",
+				"sso:List*",
+				"sso-directory:SearchGroups",
+				"sso-directory:SearchUsers",
+				"sso-directory:ListMembersInGroup",
+				"sso-directory:ListGroupsForUser",
+				"sso-directory:DescribeUsers",
+				"sso-directory:DescribeGroups",
+				"identitystore-auth:ListSessions",
+				"identitystore-auth:BatchGetSession",
+				"sso-directory:DescribeDirectory"
+			],
+			"Resource": "*"
+		}
+	]
+}
